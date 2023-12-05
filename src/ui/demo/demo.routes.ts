@@ -16,7 +16,7 @@ export const demoRoutes = Object.keys(demoPages).map((demoComponentPath) => {
 
 export const routes = [
   {
-    path: '/tools/c-lib',
+    path: '/c-lib',
     name: 'c-lib',
     children: [
       {
