@@ -7,7 +7,7 @@ import { config } from './config';
 import { routes as demoRoutes } from './ui/demo/demo.routes';
 
 const toolsRoutes = tools.map(({ path, name, component, ...config }) => ({
-  path,
+  path:"/tools/"+path,
   name,
   component,
   meta: { isTool: true, layout: layouts.toolLayout, name, ...config },
@@ -22,12 +22,12 @@ const router = createRouter({
   history: createWebHistory(config.app.baseUrl),
   routes: [
     {
-      path: '/',
+      path: '/tools',
       name: 'home',
       component: HomePage,
     },
     {
-      path: '/about',
+      path: '/tools/about',
       name: 'about',
       component: () => import('./pages/About.vue'),
     },
